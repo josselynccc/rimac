@@ -1,0 +1,40 @@
+@use "@/styles/base/variables" as vars;
+@use "@/styles/base/mixins" as mixins;
+@use "@/styles/base/typography" as type;
+.btn{
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+
+    &--primary {
+        background-color: #03050F;
+        color: #FFFFFF;
+    }
+
+    &--secondary {
+        background-color: #FF1C44;
+        color: #FFFFFF;
+    }
+
+    &--sm {
+        font-size: 12px;
+        padding: 40px;
+    }
+
+    &--md {
+        font-size: 18px;
+        padding: 40px;
+    }
+    
+    &--normal{
+        font-weight: type.$regular
+    }
+
+    &--bold{
+        font-weight: type.$bold
+    }
+
+    &--semibold{
+        font-weight: type.$semibold
+    }
+}

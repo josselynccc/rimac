@@ -1,0 +1,11 @@
+$font-primary: "Lato";
+$regular: 400;
+$semibold: 600;
+$bold: 700;
+
+$color-text: #03050F;
+
+body {
+    font-family: $font-primary, sans-serif;
+    font-weight: $regular;
+}

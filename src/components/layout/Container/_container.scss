@@ -1,0 +1,19 @@
+@use "@/styles/base/variables" as vars;
+@use "@/styles/base/mixins" as mixins;
+.layout-container {
+    width: 100%;
+    max-width: vars.$desktop;
+    margin: 0 auto;
+    background-color: #F8F9FF;
+    
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: vars.$gap;
+    padding: 24px;
+
+    @include mixins.responsive(vars.$mobile) {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
+        padding: 16px;
+    }
+}

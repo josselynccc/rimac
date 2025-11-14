@@ -1,0 +1,25 @@
+.card {
+    border-radius: 24px;
+    box-shadow: 0 2px 8px #AEACF359;
+    transition: all 0.2s;
+
+    &--normal {
+        background-color: #F8F9FF;
+        color: #000;
+    }
+
+    &--sm {
+        font-size: 12px;
+        padding: 16px 24px 40px 24px;
+    }
+
+    &--md {
+        padding: 68px 32px 48px 32px;
+        font-size: 16px;
+    }
+
+    &:hover {
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        transform: translateY(-2px);
+    }
+}

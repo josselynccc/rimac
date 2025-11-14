@@ -1,0 +1,24 @@
+@use "@/styles/base/variables" as vars;
+@use "@/styles/base/mixins" as mixins;
+@use "@/styles/base/typography" as type;
+
+.footer{
+    &__container{
+        @include mixins.flex-center;
+        justify-content: space-between;
+        text-align: center;
+        background-color: #03050F;
+        padding: 32px 120px 32px 120px;
+    }
+
+    &__logo img{
+        width:85.39px;
+        height: 42px;
+    }
+
+    &__text {
+        font-size: 12px;
+        font-weight: type.$regular;
+        color: #F8F9FF;
+    }
+}

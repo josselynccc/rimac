@@ -1,0 +1,42 @@
+@use "@/styles/base/variables" as vars;
+@use "@/styles/base/mixins" as mixins;
+@use "@/styles/base/typography" as type;
+.header{
+    &__container{
+        @include mixins.flex-center;
+        justify-content: space-between;
+        text-align: center;
+        background-color: #F8F9FF;
+        padding: 2px 120px 2px 120px;
+    }
+
+    &__logo img{
+        width:73.19px ;
+        height: 36px;
+    }
+
+    &__contact{
+        @include mixins.flex-center;
+        gap: 16px;
+    }
+
+    &__contact-desc {
+        font-size: 12px;
+        font-weight: type.$semibold;
+        color: type.$color-text;
+        @include mixins.responsive(vars.$mobile) {
+            display: none;
+        }
+    }
+
+    &__contact-phone{
+        @include mixins.flex-center;
+        gap: 8px;
+    }
+
+    &__contact-phone-number{
+        font-size: 18px;
+        font-weight: type.$bold;
+        color: type.$color-text;
+    }
+}

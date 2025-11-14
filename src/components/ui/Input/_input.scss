@@ -1,0 +1,55 @@
+@use "@/styles/base/variables" as vars;
+@use "@/styles/base/mixins" as mixins;
+@use "@/styles/base/typography" as type;
+.input-container {
+    position: relative;
+    width: 100%;
+    display: inline-block;
+
+    &--sm {
+        font-size: 12px;
+    }
+
+    &--md {
+        font-size: 18px;
+    }
+
+    .input {
+        width: 100%;
+        border: 1px solid #5E6488;
+        padding: 16px;
+        font-weight: type.$bold;
+        outline: none;
+        transition: all 0.2s;
+
+        &--normal {
+        border-radius: 8px;
+        }
+
+        &--left {
+        border-radius: 0 8px 8px 0;
+        }
+
+        &--right {
+        border-radius: 8px 0 0 8px;
+        }
+    }
+
+    .input-label {
+        position: absolute;
+        left: 16px;
+        top: 16px;
+        color: #5E6488;
+        pointer-events: none;
+        transition: all 0.2s;
+        background: #F8F9FF;
+        padding: 0 4px;
+    }
+
+    .input:focus + .input-label,
+    .input:not(:placeholder-shown) + .input-label {
+        top: -8px;
+        font-size: 12px;
+        color: #03050F;
+    }
+}
