@@ -5,6 +5,11 @@
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: vars.$gap;
+
+    @include mixins.responsive(vars.$mobile) {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 16px;
+  }
 }
 
 .plan-card-item {
