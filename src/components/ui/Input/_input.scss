@@ -11,16 +11,17 @@
     }
 
     &--md {
-        font-size: 18px;
+        font-size: 16px;
     }
 
     .input {
         width: 100%;
         border: 1px solid #5E6488;
         padding: 16px;
-        font-weight: type.$bold;
+        font-weight: type.$regular;
         outline: none;
         transition: all 0.2s;
+        box-sizing: border-box;
 
         &--normal {
         border-radius: 8px;
@@ -39,17 +40,43 @@
         position: absolute;
         left: 16px;
         top: 16px;
-        color: #5E6488;
+        color: rgba(94, 100, 136, 0.6);
         pointer-events: none;
         transition: all 0.2s;
-        background: #F8F9FF;
         padding: 0 4px;
+        font-size: 12px;
     }
 
     .input:focus + .input-label,
     .input:not(:placeholder-shown) + .input-label {
-        top: -8px;
+        top: -0.5px;
         font-size: 12px;
         color: #03050F;
+    }
+}
+
+.input-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    color: #5E6488;
+    cursor: pointer;
+
+    input[type="checkbox"] {
+        
+        border-radius: 2px;
+        width: 16px;
+        height: 16px;
+        accent-color: #0A051E;
+        margin: 0;
+    }
+
+    &--sm {
+        font-size: 12px;
+    }
+
+    &--md {
+        font-size: 16px;
     }
 }

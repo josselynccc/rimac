@@ -9,11 +9,20 @@
         text-align: center;
         background-color: #03050F;
         padding: 32px 120px 32px 120px;
+        @include mixins.responsive(vars.$mobile) {
+            display: flex;
+            flex-direction: column;
+            padding: 12px 24px 12px 24px;
+        }
     }
 
     &__logo img{
         width:85.39px;
         height: 42px;
+        @include mixins.responsive(vars.$mobile) {
+            border-bottom: 1px solid #2B304E;
+            padding-bottom: 8px;
+        }
     }
 
     &__text {
