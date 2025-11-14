@@ -7,9 +7,12 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useState } from "react";
 import './scss/insurance.scss'
 import { useNavigate } from "react-router-dom";
+import { usePersonalDataStore } from "@/core/store/usePersonalDataStore";
+
 const InsurancePage = ()=>{
     const navigate = useNavigate()
     const [isLoadingProfile, setIsLoadingProfile] = useState(false);
+    const { setPersonalData } = usePersonalDataStore();
     const {
         register,
         handleSubmit,
@@ -23,6 +26,10 @@ const InsurancePage = ()=>{
     const onSubmit = (formData: InsuranceFormData) => {
         setIsLoadingProfile(true)
         console.log(formData)
+        setPersonalData({
+            documentNumber: formData.documentNumber,
+            cellphone: formData.cellphone
+        });
         reset({
             documentType: "DNI",
             documentNumber: "",

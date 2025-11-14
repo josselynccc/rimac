@@ -9,3 +9,10 @@
 @import "../components/ui/Button/button";
 @import "../components/ui/Card/card";
 @import "../components/ui/Input/input";
+
+@import "../features/insurance/scss/insurance";
+
+@import "../features/plans/scss/plans";
+@import "../features/plans/components/atom/PlanCardSeconday/planCardSecondary";
+@import "../features/plans/components/molecule/plansCardsSecondary";
+@import "../features/summary/scss/summary";

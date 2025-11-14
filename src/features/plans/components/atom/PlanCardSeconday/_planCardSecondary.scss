@@ -1,0 +1,80 @@
+@use "@/styles/base/variables" as vars;
+@use "@/styles/base/mixins" as mixins;
+@use "@/styles/base/typography" as type;
+.plan-card {
+  grid-column: span 4;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  span{
+    background: linear-gradient(
+        135deg,
+        #00F4E2 0%,
+        #00FF7F 100% 
+    );
+    padding: 8px;
+    border-radius: 40px;
+    font-size: 12px;
+  }
+
+  &__sub-header {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: type.$bold;
+    color: #141938;
+  }
+
+  &__subtitle {
+    font-size: 12px;
+    color: #7981B2;
+    font-weight: type.$semibold;
+  }
+
+  &__price-section {
+    color: #141938;
+  }
+
+  &__price {
+    font-size: 20px;
+    font-weight: type.$bold;
+  }
+
+  &__period {
+    font-size: 20px;
+    font-weight: type.$bold;
+  }
+
+  &__descriptions {
+    padding: 0;
+    flex-grow: 1;
+    text-align: left;
+  }
+
+  &__description {
+    font-size: 16px;
+    color: #141938;
+  }
+}
+
+@include mixins.responsive (vars.$mobile) {
+  .plan-card {
+    &__title {
+      font-size: 20px;
+    }
+
+    &__price {
+      font-size: 28px;
+    }
+
+    &__button {
+      padding: 10px 20px;
+      font-size: 14px;
+    }
+  }
+  
+}
